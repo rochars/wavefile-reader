@@ -2,7 +2,7 @@
 Copyright (c) 2019 Rafael da Silva Rocha.  
 https://github.com/rochars/wavefile-reader
 
-[![NPM version](https://img.shields.io/npm/v/wavefile-reader.svg?style=for-the-badge)](https://www.npmjs.com/package/wavefile-reader) [![Docs](https://img.shields.io/badge/API-docs-blue.svg?style=for-the-badge)](https://rochars.github.io/wavefile-reader/docs) [![Tests](https://img.shields.io/badge/tests-online-blue.svg?style=for-the-badge)](https://rochars.github.io/wavefile-reader/test/browser.html)  
+[![NPM version](https://img.shields.io/npm/v/wavefile-reader.svg?style=for-the-badge)](https://www.npmjs.com/package/wavefile-reader) [![Docs](https://img.shields.io/badge/API-docs-blue.svg?style=for-the-badge)](https://rochars.github.io/wavefile-reader/docs)  
 [![Codecov](https://img.shields.io/codecov/c/github/rochars/wavefile-reader.svg?style=flat-square)](https://codecov.io/gh/rochars/wavefile-reader) [![Unix Build](https://img.shields.io/travis/rochars/wavefile-reader.svg?style=flat-square)](https://travis-ci.org/rochars/wavefile-reader) [![Windows Build](https://img.shields.io/appveyor/ci/rochars/wavefile-reader.svg?style=flat-square&logo=appveyor)](https://ci.appveyor.com/project/rochars/wavefile-reader) [![Scrutinizer](https://img.shields.io/scrutinizer/g/rochars/wavefile-reader.svg?style=flat-square&logo=scrutinizer)](https://scrutinizer-ci.com/g/rochars/wavefile-reader/)
 
 Read data from wav files.
