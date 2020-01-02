@@ -55,3 +55,14 @@ describe("Read a file during object creation", function() {
         assert.equal(wav.data.samples.length, 0);
     });
 });
+
+
+describe("loadSamples should be set to true during object creation", function() {
+
+    let wav = new WaveFile(
+        fs.readFileSync(path + "24bit-16kHz-bext-mono.wav"));
+
+    it("samples.length should be > 0", function() {
+        assert.ok(wav.data.samples.length > 0);
+    });
+});

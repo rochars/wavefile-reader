@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.1.1 - 2020-01-02
+Fix: *loadSamples* should default to *true* during object creation
+
 ## v1.1.0 - 2020-01-02
 Allow loading a file during object creation. Now you instead of:
 ```javascript

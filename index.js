@@ -46,7 +46,7 @@ export class WaveFileReader extends RIFFFile {
    * @throws {Error} If no 'fmt ' chunk is found.
    * @throws {Error} If no 'data' chunk is found.
    */
-  constructor(wavBuffer=null, loadSamples=false) {
+  constructor(wavBuffer=null, loadSamples=true) {
     super();
     // Include 'RF64' as a supported container format
     this.supported_containers.push('RF64');
