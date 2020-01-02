@@ -42,6 +42,12 @@ wav.fromBuffer(buffer);
 console.log(wav.container);
 console.log(wav.chunkSize);
 console.log(wav.fmt.chunkId);
+
+// You can also load a file during object creation:
+wav = new WaveFileReader(buffer);
+console.log(wav.container);
+console.log(wav.chunkSize);
+console.log(wav.fmt.chunkId);
 ```
 
 ### Browser
@@ -69,12 +75,14 @@ Or load it from [unpkg](https://unpkg.com/wavefile-reader):
 ```javascript
 /**
  * Set up the WaveFileReader object from a byte buffer.
- * @param {!Uint8Array} bytes The buffer.
+ * @param {!Uint8Array} wavBuffer The buffer.
+ * @param {boolean=} samples True if the samples should be loaded.
  * @throws {Error} If container is not RIFF, RIFX or RF64.
- * @throws {Error} If no "fmt " chunk is found.
- * @throws {Error} If no "data" chunk is found.
+ * @throws {Error} If format is not WAVE.
+ * @throws {Error} If no 'fmt ' chunk is found.
+ * @throws {Error} If no 'data' chunk is found.
  */
-WaveFileReader.fromBuffer(bytes) {}
+WaveFileReader.fromBuffer(bytes, samples=true) {}
 ```
 
 ### The WaveFileReader properties

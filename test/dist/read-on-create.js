@@ -1,7 +1,7 @@
 /**
  * Copyright (c) 2019 Rafael da Silva Rocha. MIT License.
  *
- * Test reading 24-bit files.
+ * Test reading a file during instance creation.
  * 
  */
 
@@ -10,11 +10,10 @@ const fs = require("fs");
 const WaveFile = require("../../test/loader.js");
 const path = "./test/files/";
 
-describe("Read only the metadata of the file", function() {
+describe("Read a file during object creation", function() {
 
-    let wBytes = fs.readFileSync(path + "24bit-16kHz-bext-mono.wav");
-    let wav = new WaveFile();
-    wav.fromBuffer(wBytes, false);
+    let wav = new WaveFile(
+        fs.readFileSync(path + "24bit-16kHz-bext-mono.wav"), false);
 
     it("chunkId should be 'RIFF'", function() {
         assert.equal(wav.container, "RIFF");

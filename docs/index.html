@@ -90,6 +90,12 @@ wav.fromBuffer(buffer);
 console.log(wav.container);
 console.log(wav.chunkSize);
 console.log(wav.fmt.chunkId);
+
+// You can also load a file during object creation:
+wav = new WaveFileReader(buffer);
+console.log(wav.container);
+console.log(wav.chunkSize);
+console.log(wav.fmt.chunkId);
 </code></pre>
 <h3>Browser</h3>
 <p>Use the <strong>wavefile-reader.js</strong> file in the <em>dist</em> folder:</p>
@@ -108,12 +114,14 @@ console.log(wav.fmt.chunkId);
 <h3>The WaveFileReader methods</h3>
 <pre class="prettyprint source lang-javascript"><code>/**
  * Set up the WaveFileReader object from a byte buffer.
- * @param {!Uint8Array} bytes The buffer.
+ * @param {!Uint8Array} wavBuffer The buffer.
+ * @param {boolean=} samples True if the samples should be loaded.
  * @throws {Error} If container is not RIFF, RIFX or RF64.
- * @throws {Error} If no &quot;fmt &quot; chunk is found.
- * @throws {Error} If no &quot;data&quot; chunk is found.
+ * @throws {Error} If format is not WAVE.
+ * @throws {Error} If no 'fmt ' chunk is found.
+ * @throws {Error} If no 'data' chunk is found.
  */
-WaveFileReader.fromBuffer(bytes) {}
+WaveFileReader.fromBuffer(bytes, samples=true) {}
 </code></pre>
 <h3>The WaveFileReader properties</h3>
 <pre class="prettyprint source lang-javascript"><code>/**
