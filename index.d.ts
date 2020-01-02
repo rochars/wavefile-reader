@@ -1,4 +1,4 @@
-// Type definitions for wavefile-reader 1.0
+// Type definitions for wavefile-reader 1.1
 // Project: https://github.com/rochars/wavefile-reader
 // Definitions by: Rafael da Silva Rocha <https://github.com/rochars>
 // Definitions: https://github.com/rochars/wavefile-reader
@@ -11,11 +11,12 @@ declare module wavefileReader {
     
     /**
      * @param {?Uint8Array=} bytes A wave file buffer.
+     * @param {boolean=} loadSamples True if the samples should be loaded.
      * @throws {Error} If no 'RIFF' chunk is found.
      * @throws {Error} If no 'fmt ' chunk is found.
      * @throws {Error} If no 'data' chunk is found.
      */
-    constructor(bytes?: Uint8Array);
+    constructor(bytes?: Uint8Array, loadSamples?:boolean);
 
     /**
      * The container identifier.
